@@ -8,6 +8,7 @@ class DiscoveryResult extends DiscoveryState {
 enum PaperSize {
   // original is 384 => 48 * 8
   mm58(360, 58, 'Roll Paper 58mm');
+  mm72(576, 72, 'Roll Paper 72mm');
 
   final int width;
   final double paperWidthMM;
@@ -86,7 +87,7 @@ class FlutterBluetoothPrinter {
     required Uint8List imageBytes,
     required int imageWidth,
     required int imageHeight,
-    PaperSize paperSize = PaperSize.mm58,
+    PaperSize paperSize = PaperSize.mm72,
     ProgressCallback? onProgress,
     int addFeeds = 0,
     bool useImageRaster = true,
